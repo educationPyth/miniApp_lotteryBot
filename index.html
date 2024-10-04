@@ -3,17 +3,23 @@
  <head>
  	<meta charset="UTF-8">
  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://unpkg.com/@tonconnect/ui@0.0.9/dist/tonconnect-ui.min.js"></script>
  	<title>miniApp lottery bot</title>
  	<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
  </head>
  <body>
 
-
+    <script>
+        const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+            manifestUrl: 'https://miniapp-educat.amvera.io/tonconnect-manifest.json',
+            buttonRootId: 'connect'
+        });
+    </script>
     <div class="Main">
         <h1>Тестовое приложение</h1>
         <img src="{{ url_for('static', filename='bot.png') }}" alt="123">
         <p></p>
-        <button class="btn">Кнопка</button>
+        <button id="connect" class="btn">Кнопка</button>
     </div>
 
     <script src="https://telegram.org/js/telegram-web-app.js"></script>

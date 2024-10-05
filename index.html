@@ -8,19 +8,18 @@
  	<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
  </head>
  <body>
-
-    <script>
+     <div class="Main">
+        <h1>Тестовое приложение</h1>
+        <img src="{{ url_for('static', filename='bot.png') }}" alt="123">
+        <p></p>
+        <div id="connect"></div>
+    </div>
+     <script>
         const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
             manifestUrl: 'https://miniapp-educat.amvera.io/tonconnect-manifest.json',
             buttonRootId: 'connect'
         });
     </script>
-    <div class="Main">
-        <h1>Тестовое приложение</h1>
-        <img src="{{ url_for('static', filename='bot.png') }}" alt="123">
-        <p></p>
-        <button id="connect" class="btn">Кнопка</button>
-    </div>
 
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
  	<script src="{{ url_for('static',filename='js/jquery-3.3.1.min.js') }}"></script>
